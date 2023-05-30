@@ -28,9 +28,10 @@
 
 ## The Things Stack을 Docker에서 돌려보자!
 
-0. [The Things Stack - docker overview](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/)
+1. [The Things Stack - docker overview](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/)
 1. [The Things Stack - configuration](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/configuration/)
-2. [The Things Stack - running](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/running-the-stack/)
+1. [The Things Stack - running](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/running-the-stack/)
+1. [MMYU - leisure guardian](https://github.com/LeisureGuardian/LG-API)
 
 위 사이트들를 참고하여 작성하였다.
 
@@ -122,3 +123,7 @@
     위의 오류가 발생하였다면, docker desktop이 실행중인지 확인하자.
 
     로그인 후 아래의 사진의 페이지로 들어와진다면 성공이다.
+    
+    ![tts_console](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/dd77682a-adfa-4ddf-bfaa-8195fc01f18c)
+    
+    이후 lora gateway를 등록한 후 통신해보도록 하자.
