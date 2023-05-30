@@ -131,9 +131,41 @@
     이후 lora gateway를 등록한 후 통신해보도록 하자.
 
 1. LoRaWAN 설정
+    
+    게이트웨이는 Heltec Inc.의 HT-M00을 사용하였다.
 
-    <이미지1. HT-M00 설정 창>
+    ![ht-m00_setting](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/bc03ed0d-7e43-47c3-a9b8-31b965cc81b5)
+    
+    HT-M00 설정 창. 
+    
+    WiFi는 2.4GHz로 연결하자. 5GHz를 지원하지 않는다.
+    
+    서버 주소는 본인이 연 The Things Stack 서버의 IP 주소 및 DNS를 입력하자.
+    
+    포트는 1700 고정이다.
+    
+    컴퓨터 방화벽에서 1700 포트를 UDP로 열자!
 
-    <이미지2. TTS Console에서 게이트웨이 등록>
+    ![tts_console_register_gateway](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/f5171ea3-e603-4949-b783-9609990f33d5)
+    
+    TTS Console에서 게이트웨이 등록
+    
+    Gateway ID는 Gateway EUI를 기준으로 자동으로 설정된다.
+    
+    Frequency plan은 한국에서 사용하므로 South Korea로 설정하자.
+    
+    ***Require authenticated connection은 체크 해제하자!***
+    
+    해당 옵션이 켜져있으면 연결이 제대로 되지 않는다. 이 부분에서 삽질을 많이 했다.
 
-    <이미지3. TTS Console에 연결된 게이트웨이 상황>
+    ![tts_console_edit_gateway](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/616e1359-66cc-4a4a-8f9d-6b183a72d457)
+    
+    TTS Console 게이트웨이 General Setting에서 서버 주소 등록
+    
+    HT-M00에 등록한 서버 주소를 넣자.
+
+    ![KakaoTalk_20230530_203239359](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/d99dffc6-9df4-42f4-af5b-21a9a4cabde4)
+    
+    TTS Console에 연결된 게이트웨이 상황
+    
+    위의 과정을 잘 따라왔다면, 위와 같이 연결이 되었다고 뜰 것이다.
