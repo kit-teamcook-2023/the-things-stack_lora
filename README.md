@@ -163,9 +163,9 @@
     TTS Console 게이트웨이 General Setting에서 서버 주소 등록
     
     HT-M00에 등록한 서버 주소를 넣자.
-
-    ![KakaoTalk_20230530_203239359](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/d99dffc6-9df4-42f4-af5b-21a9a4cabde4)
     
+    ![KakaoTalk_20230530_211721452](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/b78d4199-2846-4344-843b-8b825c134059)
+
     TTS Console에 연결된 게이트웨이 상황
     
     위의 과정을 잘 따라왔다면, 위와 같이 연결이 되었다고 뜰 것이다.
