@@ -59,7 +59,7 @@
 1. ttn-lw-stack-docker.yml에서 아래의 사항들을 변경한다.
     ```
     https => http
-    thethings.example.com => <your ip>
+    thethings.example.com => <your ip or dns>
     ```
     이때, your ip에 localhost를 적는 어리석은 짓은 하지 말자. 로그인 시 oauth 오류가 발생한다.
 
