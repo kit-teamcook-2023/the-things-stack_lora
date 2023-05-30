@@ -26,6 +26,8 @@
 
     OAuth 생성 단계에서 CLIENT_SECRET을 잘못 입력하여 auth가 제대로 되지 않던 문제
 
+    [trouble shooting](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/configuration/#running-the-things-stack-as-localhost) - localhost에서는 1885로 redirect 하지 않는다고 한다.
+
 ## The Things Stack을 Docker에서 돌려보자!
 
 1. [The Things Stack - docker overview](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/)
@@ -127,3 +129,11 @@
     ![tts_console](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/dd77682a-adfa-4ddf-bfaa-8195fc01f18c)
     
     이후 lora gateway를 등록한 후 통신해보도록 하자.
+
+1. LoRaWAN 설정
+
+    <이미지1. HT-M00 설정 창>
+
+    <이미지2. TTS Console에서 게이트웨이 등록>
+
+    <이미지3. TTS Console에 연결된 게이트웨이 상황>
