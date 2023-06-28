@@ -2,4 +2,7 @@ blob
 acme
 img
 
+.env
 .git
+
+__pycache__
