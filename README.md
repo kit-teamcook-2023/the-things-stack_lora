@@ -254,16 +254,17 @@
 
     Application 탭에 들어가서 Create Application을 누르자.
 
-    &lt; 1-1 &gt;
+    ![1-1](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/17d0a451-9136-436b-bf0c-86e11d299ac6)
 
     Application Name을 입력한 후 Create Application 버튼을 누르자.
 
-    &lt; 1-2 &gt;
+    ![1-2](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/216a47d0-bb8f-44e5-8ee9-7aa3cc3fc571)
 
     Application을 만들었다면, 아래의 화면이 뜰 것이다.  
     Register end device를 누르자.
+   
+    ![1-3](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/8e17507d-c809-4fea-8478-2ab8704bacdc)
 
-    &lt; 1-3 &gt;
 
 
 1. lora node 등록
@@ -272,7 +273,7 @@
     아래와 같이 입력하자.  
     단, JoinEUI는 다르게 설정해도 상관없다. 우리는 JoinEUI를 재설정할 수 있다.
 
-    &lt; 2-1 &gt;
+    ![2-1](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/61aa314e-6f64-4e66-897f-1f70f76acedd)
 
     위와 같이 입력하였다면, Arduino IDE를 켜자.  
     여기서부터는 잠시 다른 github repo를 참고하도록 한다.  
@@ -343,7 +344,9 @@
     - DEVEUI는 CUSTOM으로 사용해도 되고, GenerateByChipId를 사용해도 된다.  
     둘 다 DEVEUI를 출력해준다.
 
-    &lt; 2-3 &gt;
+    ![2-3](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/500f6133-b24e-4b7e-8a88-390a20cf0238)
+
+    ![2-4](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/fbc11743-749e-475c-b821-5e37549b57f0)
 
     &lt; 2-4 &gt;
 
@@ -354,10 +357,10 @@
     DevEui, AppEui, AppKey를 MSB로 코드에 넣자.  
     빨간 버튼을 누르면 헥사코드로 바꿔준다. 잘 이용하자.
 
-    &lt; 2-5 &gt;
+    ![2-5](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/375803b5-b46f-4de5-bb0c-d115ff8da3c5)
 
     노드 화면이 아래와 같이 되어있다면 연결이 된 것이다.
 
-    &lt; 2-6 &gt;
+    ![2-6](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/53d6c2b2-518b-4723-9d70-7ba08cb08276)
 
 <div style="text-align: right"><a href="#">top</a></div>
