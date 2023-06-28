@@ -92,7 +92,7 @@
 1. [The Things Stack - configuration](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/configuration/)
 1. [The Things Stack - running](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/running-the-stack/)
 1. [The Things Network - support freq](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
-1. [MMYU - leisure guardian](https://github.com/LeisureGuardian/LG-API)
+1. [MMYU - leisure guardian](https://github.com/LeisureGuardian)
 
 위 사이트들를 참고하여 작성하였다.
 
