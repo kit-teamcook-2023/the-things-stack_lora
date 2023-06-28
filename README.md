@@ -1,6 +1,53 @@
-# The Things Stack - LoRa
+# The Things Stack - LoRaWAN
 
-## 삽질일기
+<details>
+<summary> 목차 </summary>
+
+1. [개요](#개요)
+1. [삽질일기](#1-삽질일기)
+    - docker - Incorrect function
+    - tls error
+    - localhost issue
+    - CLIENT_SECRET
+    - the things network's freq
+2. [TTS on Docker](#2-the-things-stack을-docker에서-돌려보자)
+3. [Append Device to TTN](#3-lorawan에-기기를-등록-해보자)
+</details>
+
+## 0. 개요
+- 개발 목적
+
+  현재 시대에서는 각종 공과금이나 소비량을 실시간으로 확인하고 관리하는 것이 중요하다고 생각한다.  
+  특히, 가스 사용량이 많은 가정이나 사업체에서는 이러한 관리가 중요하다 생각한다.  
+  이를 위해 실시간으로 가스 요금을 확인할 수 있는 플랫폼의 개발이 필요하다고 생각하였다.
+
+- BLE vs LoRa
+
+    | 기능 | Bluetooth Low Energy (BLE) | Long Range (LoRaWAN) |
+    |---|---|---|
+    | 전송 거리 | 최대 100m | 수 km 이상 |
+    | 전력 소비 | 저전력 기술 | 매우 저전력 기술 |
+    | 데이터 전송 속도 | 1Mbps 이상 | 최대 50kbps |
+    | 안전성 | AES-128 | AES-128 |
+    | 연결 가능한 기기 수 | 1:7 (BLE 5.0 - 1:1000) | 1:1000 |
+    | Downlink | 매우 용이. 직접 연결되어 있기 때문에 실시간으로 downlink 메시지 전송 가능 | 비교적 덜 용이. Downlink 메시지는 장치의 수신 창 동안에만 전송 가능하며, 네트워크 및 전력 소모에 대한 제한이 있음 |
+
+
+    위의 표를 보다시피 LoRaWAN이 블루투스보다 전력을 적게 사용한다는 것을 볼 수 있다. 따라서 LoRaWAN을 사용하여 개발하고자 한다.
+
+- 개발 환경
+    - OS : windows 10 edu 22H2
+    - WSL version : wsl2
+    - Linux Kernel : Ubuntu 22.04.02 LTS
+    - Docker version : 4.18.0
+
+- 개발 기기
+    - [HT-M00](https://heltec.org/project/ht-m00/)
+    - [lora 32 v2](https://heltec.org/project/wifi-lora-32/)
+
+<div style="text-align: right"><a href="#">top</a></div>
+
+## 1. 삽질일기
 1. docker에서 공식 문서에서 제공하는 docker-compose.yml을 docker-compose up으로 실행하니 
     ```
     read C:\Users\<User>\.env: Incorrect function
@@ -35,9 +82,11 @@
 
     TTN에서 제공하는 주파수를 사용하여야 하였으나, 한국에서 사용 가능한 lora 주파수를 gateway에 입력해서 연결이 되지 않았다.
 
-***
 
-## The Things Stack을 Docker에서 돌려보자!
+<div style="text-align: right"><a href="#">top</a></div>
+
+***
+## 2. The Things Stack을 Docker에서 돌려보자
 
 1. [The Things Stack - docker overview](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/)
 1. [The Things Stack - configuration](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/configuration/)
@@ -46,11 +95,6 @@
 1. [MMYU - leisure guardian](https://github.com/LeisureGuardian/LG-API)
 
 위 사이트들를 참고하여 작성하였다.
-
-1. 윈도우 10 edu 22H2, wsl2, ubuntu 22.04.2 LTS, docker 4.18.0 을 기준으로 한다.  
-lorawan gateway는 [HT-M00](https://heltec.org/project/ht-m00/), lora node는 [lora 32 v2](https://heltec.org/project/wifi-lora-32/)를 사용한다.
-
-
 
 1. 먼저 [configuration files](https://www.thethingsindustries.com/docs/the-things-stack/host/docker/configuration/#example-configuration-files)에 들어가 Open Source 파일을 받자.
 
@@ -159,8 +203,10 @@ lorawan gateway는 [HT-M00](https://heltec.org/project/ht-m00/), lora node는 [l
     
     이후 lora gateway를 등록한 후 통신해보도록 하자.
 
+<div style="text-align: right"><a href="#">top</a></div>
+
 ***
-## LoRaWAN을 사용해보자.
+## 3. LoRaWAN에 기기를 등록 해보자.
 
 1. LoRaWAN 설정
     
@@ -313,3 +359,5 @@ lorawan gateway는 [HT-M00](https://heltec.org/project/ht-m00/), lora node는 [l
     노드 화면이 아래와 같이 되어있다면 연결이 된 것이다.
 
     &lt; 2-6 &gt;
+
+<div style="text-align: right"><a href="#">top</a></div>
