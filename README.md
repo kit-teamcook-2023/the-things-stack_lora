@@ -201,14 +201,14 @@
     
     ![tts_console](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/dd77682a-adfa-4ddf-bfaa-8195fc01f18c)
     
-    이후 lora gateway를 등록한 후 통신해보도록 하자.
+    이후 lora gateway를 등록해보자.
 
 <div style="text-align: right"><a href="#">top</a></div>
 
 ***
 ## 3. LoRaWAN에 기기를 등록 해보자.
 
-1. LoRaWAN 설정
+1. 게이트웨이 등록
     
     게이트웨이는 Heltec Inc.의 HT-M00을 사용하였다.
 
@@ -264,8 +264,6 @@
     Register end device를 누르자.
    
     ![1-3](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/8e17507d-c809-4fea-8478-2ab8704bacdc)
-
-
 
 1. lora node 등록
 
@@ -347,8 +345,6 @@
     ![2-3](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/500f6133-b24e-4b7e-8a88-390a20cf0238)
 
     ![2-4](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/fbc11743-749e-475c-b821-5e37549b57f0)
-
-    &lt; 2-4 &gt;
 
     위와 같은 DevEUI를 얻은 경우, 다시 Application 설정으로 돌아가자.  
     얻은 DevEUI를 넣고, AppEUI를 generate 해주자.
