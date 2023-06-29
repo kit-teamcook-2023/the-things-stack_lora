@@ -4,6 +4,10 @@
 <summary> 목차 </summary>
 
 1. [개요](#개요)
+    - [개발 목적](#1-개발-목적)
+    - [BLE vs LoRa](#2-ble-vs-lora)
+    - [개발 환경](#3-개발-환경)
+    - [개발 기기](#4-개발-기기)
 1. [삽질일기](#1-삽질일기)
     - docker - Incorrect function
     - tls error
@@ -15,13 +19,13 @@
 </details>
 
 ## 0. 개요
-- 개발 목적
+### 1) 개발 목적
 
   현재 시대에서는 각종 공과금이나 소비량을 실시간으로 확인하고 관리하는 것이 중요하다고 생각한다.  
   특히, 가스 사용량이 많은 가정이나 사업체에서는 이러한 관리가 중요하다 생각한다.  
   이를 위해 실시간으로 가스 요금을 확인할 수 있는 플랫폼의 개발이 필요하다고 생각하였다.
 
-- BLE vs LoRa
+### 2) BLE vs LoRa
 
     | 기능 | Bluetooth Low Energy (BLE) | Long Range (LoRaWAN) |
     |---|---|---|
@@ -35,20 +39,22 @@
 
     위의 표를 보다시피 LoRaWAN이 블루투스보다 전력을 적게 사용한다는 것을 볼 수 있다. 따라서 LoRaWAN을 사용하여 개발하고자 한다.
 
-- 개발 환경
+### 3) 개발 환경
     - OS : windows 10 edu 22H2
     - WSL version : wsl2
     - Linux Kernel : Ubuntu 22.04.02 LTS
     - Docker version : 4.18.0
 
-- 개발 기기
+### 4) 개발 기기
     - [HT-M00](https://heltec.org/project/ht-m00/)
     - [lora 32 v2](https://heltec.org/project/wifi-lora-32/)
 
 <div style="text-align: right"><a href="#">top</a></div>
 
 ## 1. 삽질일기
-1. docker에서 공식 문서에서 제공하는 docker-compose.yml을 docker-compose up으로 실행하니 
+### 1) docker env 문제
+    docker에서 공식 문서에서 제공하는 docker-compose.yml을 docker-compose up으로 실행하니 
+
     ```
     read C:\Users\<User>\.env: Incorrect function
     ```
@@ -56,7 +62,7 @@
 
     volumes에서 .env를 참조하는데, 이 부분이 문제가 된 것으로 판단하여 해당 부분을 주석 처리하였음
 
-1. TLS 문제
+### 2) TLS 문제
     
     https로 접근을 하려니 tls 인증 서버가 없어 오류 발생
     
