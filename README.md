@@ -219,8 +219,6 @@ error during connect: this error may indicate that the docker daemon is not runn
 
 ![tts_console](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/dd77682a-adfa-4ddf-bfaa-8195fc01f18c)
 
-이후 lora gateway를 등록해보자.
-
 <div style="text-align: right"><a href="#">top</a></div>
 
 ***
