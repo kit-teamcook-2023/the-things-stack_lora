@@ -128,7 +128,7 @@ root
 ```
 
 ### 3) docker 파일 수정
- ttn-lw-stack-docker.yml에서 아래의 사항들을 변경한다.
+ttn-lw-stack-docker.yml에서 아래의 사항들을 변경한다.
 
 ```
 https => http
@@ -167,13 +167,17 @@ docker-compose run --rm stack is-db create-admin-user --id admin --email your@em
 ### 7) OAuth 설정
 
 로그인 및 회원가입을 위해선 OAuth 설정이 필요하다.  
-id는 console/oauth/client-id, secret은 console/oauth/client-secret을 사용하면 된다.
+id는 console/oauth/client-id, secret은 console/oauth/client-secret을 사용하면 된다.  
+&lt;DOMAIN&gt;을 자신의 서버 주소, &lt;SECRET&gt;를 ttn-lw-stack-docker.yml의 console/oauth/cilent-secret으로 바꾸자.
+
+<details>
+<summary>Mac OS, Linux</summary>
 
 ``` bash
-SERVER_ADDRESS=https://thethings.example.com
+SERVER_ADDRESS=<DOMAIN>
 ID=console
 NAME=Console
-CLIENT_SECRET=console
+CLIENT_SECRET=<SECRET>
 REDIRECT_URI=${SERVER_ADDRESS}/console/oauth/callback
 REDIRECT_PATH=/console/oauth/callback
 LOGOUT_REDIRECT_URI=${SERVER_ADDRESS}/console
@@ -188,25 +192,27 @@ docker-compose run --rm stack is-db create-oauth-client \
 --logout-redirect-uri "${LOGOUT_REDIRECT_URI}" \
 --logout-redirect-uri "${LOGOUT_REDIRECT_PATH}"
 ```
+</details>
 
-윈도우에서는 해당 명령어가 작동하지 않을 수 있다. 노가다지만 하나 하나 변수에 맞게 넣는 수밖에 없다.(나도 그랬다.)  
-&lt;DOMAIN&gt;을 자신의 서버 주소, &lt;SECRET&gt;를 ttn-lw-stack-docker.yml의 console/oauth/cilent-secret으로 바꾸자.
+<details>
+<summary>Windows</summary>
+
 ``` shell
 docker-compose run --rm stack is-db create-oauth-client --id console --name "Console" --owner admin --secret "<SECRET>" --redirect-uri "https://<DOMAIN>/console/oauth/callback" --redirect-uri "/console/oauth/callback" --logout-redirect-uri "https://<DOMAIN>/console" --logout-redirect-uri "/console"
 ```
+</details>
+
 
 ### 8) 도커 실행
 
 ``` bash
 docker-compose up
 ```
-
 명령어를 통해 docker를 실행하고, localhost로 접속을 해보자.
 
 ``` bash
 error during connect: this error may indicate that the docker daemon is not running
 ```
-
 위의 오류가 발생하였다면, docker desktop이 실행중인지 확인하자.   
 
 로그인 후 아래의 사진의 페이지로 들어와진다면 성공이다.
