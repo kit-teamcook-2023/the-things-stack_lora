@@ -152,18 +152,27 @@ docker-compose run --rm stack is-db migrate
 명령어를 입력해 데이터베이스를 migration 해주자. 이때, postgres가 켜지는 시간이 있으므로, 오류가 뜬다고 해서 당황하지 말고 여러 번 명령어를 입력해주자.
     
 ### 6) 유저 등록
+
+명령어를 입력하여 admin 계정을 만들어주도록 하자. 이 명령어에서 admin 계정의 비밀번호를 설정하게 된다.
+
+<details>
+<summary>Mac OS, Linux</summary>
+    
 ``` bash
 docker-compose run \
     --rm stack is-db create-admin-user \
     --id admin \
     --email your@email.com
 ```
-명령어를 입력하여 admin 계정을 만들어주도록 하자. 이 명령어에서 admin 계정의 비밀번호를 설정하게 된다.
+</details>
 
-윈도우의 아래 명령어로 입력하자.
+<details>
+<summary>Windows</summary>
+
 ``` shell
 docker-compose run --rm stack is-db create-admin-user --id admin --email your@email.com
 ```
+</details>
 
 ### 7) OAuth 설정
 
