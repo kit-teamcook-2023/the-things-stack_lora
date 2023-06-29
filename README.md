@@ -375,7 +375,7 @@ DevEui, AppEui, AppKey를 MSB로 코드에 넣자.
 
 ### 1) MQTT 키 발급
 
-1-1
+![1-1](https://github.com/kit-teamcook-2023/the-things-stack_lora/assets/81803973/fff81f7e-8e4b-4bc1-987e-1bd61684fffb)
 
 generate new api key 버튼을 눌러 key를 발급받자.  
 이때, username과 password는 추후에 사용되므로 잘 저장해두자.
