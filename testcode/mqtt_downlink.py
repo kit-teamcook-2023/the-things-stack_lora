@@ -19,14 +19,14 @@ def on_publish(client, userdata, mid):
 client = mqtt.Client()
 client.on_publish = on_publish
 client.username_pw_set(user, password=password)
-client.connect("hanhomettn.iptime.org", 1883, 60)
+client.connect(host, 1883, 60)
 
 message = codec.encode("Hello World!")
 
 payload = {
     "downlinks": [
         {
-            "f_port": 2,
+            "f_port": 4, # modifie f_port 1 to 224
             "frm_payload": message,
         }
     ]

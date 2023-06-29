@@ -19,9 +19,9 @@ def on_message(client, userdata, msg):
     try:
         dict_string = msg.payload
         diction = json.loads(dict_string)
-        print(msg.topic)
+        print('topic:', msg.topic, ', time:', diction['received_at'])
         data = codec.decode(diction['uplink_message']['frm_payload'])
-        print(data)
+        print('message:', data)
     except:
         print("No connection")
 
