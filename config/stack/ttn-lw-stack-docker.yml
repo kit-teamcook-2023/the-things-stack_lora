@@ -6,8 +6,8 @@ is:
     sender-address: "noreply@thethings.example.com"
     network:
       name: "The Things Stack"
-      console-url: "http://orm-622.iptime.org/console"
-      identity-server-url: "http://orm-622.iptime.org/oauth"
+      console-url: "http://hanhomettn.iptime.org/console"
+      identity-server-url: "http://hanhomettn.iptime.org/oauth"
 
     # If sending email with Sendgrid
     # provider: sendgrid
@@ -24,9 +24,9 @@ is:
   # Web UI configuration for "thethings.example.com":
   oauth:
     ui:
-      canonical-url: "http://orm-622.iptime.org/oauth"
+      canonical-url: "http://hanhomettn.iptime.org/oauth"
       is:
-        base-url: "http://orm-622.iptime.org/api/v3"
+        base-url: "http://hanhomettn.iptime.org/api/v3"
 
 # HTTP server configuration
 http:
@@ -57,75 +57,75 @@ tls:
 # If Gateway Server enabled, defaults for "thethings.example.com":
 gs:
   mqtt:
-    public-address: "orm-622.iptime.org:1882"
-    public-tls-address: "orm-622.iptime.org:8882"
+    public-address: "hanhomettn.iptime.org:1882"
+    public-tls-address: "hanhomettn.iptime.org:8882"
   mqtt-v2:
-    public-address: "orm-622.iptime.org:1881"
-    public-tls-address: "orm-622.iptime.org:8881"
+    public-address: "hanhomettn.iptime.org:1881"
+    public-tls-address: "hanhomettn.iptime.org:8881"
 
 # If Gateway Configuration Server enabled, defaults for "thethings.example.com":
 gcs:
   basic-station:
     default:
-      lns-uri: "wss://orm-622.iptime.org:8887"
+      lns-uri: "wss://hanhomettn.iptime.org:8887"
   the-things-gateway:
     default:
-      mqtt-server: "mqtts://orm-622.iptime.org:8881"
+      mqtt-server: "mqtts://hanhomettn.iptime.org:8881"
 
-# Web UI configuration for "orm-622.iptime.org":
+# Web UI configuration for "hanhomettn.iptime.org":
 console:
   ui:
-    canonical-url: "http://orm-622.iptime.org/console"
-    account-url: "http://orm-622.iptime.org/console"
+    canonical-url: "http://hanhomettn.iptime.org/console"
+    account-url: "http://hanhomettn.iptime.org/console"
     is:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     gs:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     gcs:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     ns:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     as:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     js:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     qrg:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     edtc:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     dcs:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
   oauth:
-    authorize-url: "http://orm-622.iptime.org/oauth/authorize"
-    token-url: "http://orm-622.iptime.org/oauth/token"
-    logout-url: "http://orm-622.iptime.org/oauth/logout"
+    authorize-url: "http://hanhomettn.iptime.org/oauth/authorize"
+    token-url: "http://hanhomettn.iptime.org/oauth/token"
+    logout-url: "http://hanhomettn.iptime.org/oauth/logout"
     client-id: "console"
     client-secret: "FUCKYOU" # choose or generate a secret
 
 # If Application Server enabled, defaults for "thethings.example.com":
 as:
   mqtt:
-    public-address: "orm-622.iptime.org:1883"
-    public-tls-address: "orm-622.iptime.org:8883"
+    public-address: "hanhomettn.iptime.org:1883"
+    public-tls-address: "hanhomettn.iptime.org:8883"
   webhooks:
     downlink:
-      public-address: "orm-622.iptime.org:1885/api/v3"
+      public-address: "hanhomettn.iptime.org:1885/api/v3"
 
 # If Device Claiming Server enabled, defaults for "thethings.example.com":
 dcs:
   oauth:
-    authorize-url: "http://orm-622.iptime.org/oauth/authorize"
-    token-url: "http://orm-622.iptime.org/oauth/token"
-    logout-url: "http://orm-622.iptime.org/oauth/logout"
+    authorize-url: "http://hanhomettn.iptime.org/oauth/authorize"
+    token-url: "http://hanhomettn.iptime.org/oauth/token"
+    logout-url: "http://hanhomettn.iptime.org/oauth/logout"
     client-id: "device-claiming"
     client-secret: "device-claiming" # choose or generate a secret
   ui:
-    canonical-url: "http://orm-622.iptime.org/claim"
+    canonical-url: "http://hanhomettn.iptime.org/claim"
     as:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     dcs:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     is:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
     ns:
-      base-url: "http://orm-622.iptime.org/api/v3"
+      base-url: "http://hanhomettn.iptime.org/api/v3"
